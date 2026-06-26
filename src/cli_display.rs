@@ -45,7 +45,7 @@ pub fn display_frame(points: HashSet<(i32, i32)>, generation: u64) {
             for (x, y) in &points_to_be_printed {
                 // finding proper location of point
                 if y + Y_MIDDLE == row && x + X_MIDDLE == column {
-                    row_print.push_str("# ");
+                    row_print.push('🦀');
                     continue 'out;
                 }
             }
