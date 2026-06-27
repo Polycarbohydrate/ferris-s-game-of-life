@@ -3,3 +3,24 @@
 
 ---
 [Conway's Game of Life](https://wikipedia.org/wiki/Conway%27s_Game_of_Life) programmed in [Rust](https://rust-lang.org/).
+
+# Features
+- Core engine that produces the next generation of cells from the previous generation
+- CLI output for cross-platform usage
+- Flexible cell input
+- Easy to understand instructions
+- Total control over speed of each simulation
+- Ability to customize grid size of simulation space
+- Error handling
+- Blazing fast generation with Rust
+- Smooth frame output
+- Preloaded grid sizes for convenience
+
+# How to use
+1. In the [releases](https://github.com/Polycarbohydrate/FGOL/releases) section, download the binary for your platform (Mac, Linux, Windows).
+2. Run the binary and follow the instructions in the terminal.
+
+Alternative:
+1. Make sure Rust is installed. [Click me to see instructions!](https://rust-lang.org/learn/get-started/)
+2. Once Rust is installed [clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) this repository.
+3. Open the terminal in the directory of this repository and build and run using the command `cargo run` or `cargo run --release`. (IDEs and some text editors, such as VSCode, will have a terminal that is already loaded into the proper repository directory.)
