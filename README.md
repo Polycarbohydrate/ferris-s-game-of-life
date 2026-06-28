@@ -13,7 +13,6 @@
 - Ability to customize grid size of simulation space
 - Error handling
 - Blazing fast generation with Rust
-- Smooth frame output
 - Preloaded grid sizes for convenience
 
 # How to use
