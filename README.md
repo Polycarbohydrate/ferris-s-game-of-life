@@ -35,6 +35,12 @@ Alternative 2:
 
 Follow the instructions on the terminal to start your own simulation!
 
+# Planned milestones
+- Fix CLI bugs and make the CLI better with more features.
+- Develop a TUI version
+- Develop a GUI version
+- Develop a Web version
+
 # AI Usage
 No AI was used in any part of the program. This includes all files under `src/` (`main.rs`, `inputs.rs`, `cli_display.rs`, `core.rs`).  
 All algorithms and program design were made by me (Polycarbohydrate).
