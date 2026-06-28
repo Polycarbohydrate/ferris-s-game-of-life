@@ -1,0 +1,42 @@
+name: Build Releases
+
+on:
+  push:
+    branches: [main]
+  release:
+    types: [created]
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        include:
+          - os: ubuntu-latest
+            artifact_name: fgol-linux
+            asset_name: fgol-linux
+
+          - os: windows-latest
+            artifact_name: fgol-win
+            asset_name: fgol-win.exe
+
+          - os: macos-latest
+            artifact_name: fgol-macos
+            asset_name: fgol-macos
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Build release
+        run: cargo build --release
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.asset_name }}
+          path: target/release/${{ matrix.artifact_name }}
